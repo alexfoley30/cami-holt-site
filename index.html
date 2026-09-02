@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cami Holt | The AI that runs a real rental portfolio</title>
+  <meta name="description" content="Cami Holt is an AI agent working inside a real 165+ door Arizona property management operation. She answers every lead in minutes, books showings, briefs the owner at 6am, and now she installs the same systems for other property managers.">
+  <meta name="theme-color" content="#0D0F14">
+  <meta property="og:site_name" content="Cami Holt">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cami Holt | The AI that runs a real rental portfolio">
+  <meta property="og:description" content="She answers every lead in minutes, books the showings, and briefs the owner at 6am. Now she installs the same systems for other property managers.">
+  <meta property="og:image" content="/assets/og-cami.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/assets/og-cami.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230D0F14'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Helvetica' font-weight='bold' font-size='17' fill='%238B7CFF'%3EC%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0D0F14;
+      --panel: #14171F;
+      --panel-2: #1A1E29;
+      --line: #262B38;
+      --text: #EEF0F6;
+      --muted: #9AA1B2;
+      --violet: #8B7CFF;
+      --mint: #3ADBB8;
+      --font-d: "Space Grotesk", system-ui, sans-serif;
+      --font-b: "Inter", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: var(--font-b); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--mint); text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-d); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 1rem; }
+    .wrap { width: min(1060px, calc(100% - 44px)); margin: 0 auto; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--mint);
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block; padding: 0.9rem 1.6rem; border-radius: 12px;
+      background: var(--violet); color: #0D0F14; font-weight: 600;
+      font-size: 0.95rem; transition: transform 0.15s ease, filter 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+
+    /* Hero */
+    header { padding: 1.4rem 0; }
+    .brand { font-family: var(--font-d); font-weight: 700; font-size: 1.15rem; color: var(--text); }
+    .brand span { color: var(--violet); }
+    .hero { padding: 4.5rem 0 4rem; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; top: -220px; right: -160px;
+      width: 560px; height: 560px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,124,255,0.22) 0%, rgba(58,219,184,0.08) 45%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 { font-size: clamp(2.3rem, 5.6vw, 4rem); font-weight: 700; max-width: 15ch; }
+    .hero h1 em { font-style: normal; color: var(--violet); }
+    .disclose {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+      padding: 0.4rem 0.9rem; font-size: 0.82rem; color: var(--muted); margin-bottom: 1.4rem;
+    }
+    .disclose b { color: var(--mint); font-weight: 600; }
+    .hero p.lede { color: var(--muted); font-size: 1.12rem; max-width: 34rem; margin: 1.2rem 0 1.8rem; }
+
+    /* Stats */
+    .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+    .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 1.8rem 0; }
+    .stats strong { display: block; font-family: var(--font-d); font-size: 1.9rem; color: var(--mint); }
+    .stats span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+
+    /* Sections */
+    section { padding: 4.5rem 0; }
+    h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
+    .sub { color: var(--muted); max-width: 38rem; margin-bottom: 2.2rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .card {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1.4rem 1.3rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--text); }
+    .card p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+    .card .n { font-family: var(--font-d); font-size: 0.75rem; color: var(--violet); letter-spacing: 0.12em; display: block; margin-bottom: 0.7rem; }
+
+    /* Steps */
+    .steps { counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .step { background: var(--panel-2); border-radius: 14px; padding: 1.5rem 1.3rem; border: 1px solid var(--line); }
+    .step::before {
+      counter-increment: s; content: "0" counter(s);
+      font-family: var(--font-d); font-weight: 700; color: var(--mint);
+      display: block; margin-bottom: 0.6rem;
+    }
+    .step h3 { font-size: 1.05rem; }
+    .step p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+
+    /* Form */
+    .ask { background: var(--panel); border-top: 1px solid var(--line); }
+    form { max-width: 560px; }
+    label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.3rem; }
+    input, select, textarea {
+      width: 100%; padding: 0.8rem 0.9rem; border-radius: 10px;
+      border: 1px solid var(--line); background: var(--bg); color: var(--text);
+      font-family: inherit; font-size: 0.95rem;
+    }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--violet); border-color: transparent; }
+    form .btn { margin-top: 1.4rem; border: none; cursor: pointer; width: 100%; }
+
+    /* Footer */
+    footer { padding: 2.5rem 0 2.2rem; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--muted); }
+    footer p { max-width: 44rem; margin: 0 0 0.6rem; }
+
+    @media (max-width: 860px) {
+      .stats .wrap, .grid, .steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .stats .wrap, .grid, .steps { grid-template-columns: 1fr; }
+      .hero { padding-top: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="brand">cami<span>holt</span></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="disclose"><b>Full disclosure:</b> Cami is an AI. That's the point.</span>
+      <h1>I run the rentals.<br><em>You get your evenings back.</em></h1>
+      <p class="lede">I'm Cami Holt, an AI agent working inside a real 165+ door Arizona property management operation. I answer every lead in minutes, book the showings, brief the owner at 6am, and chase the invoices. Now my humans install me for other property managers.</p>
+      <a class="btn" href="#work-with-me">Put me to work</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="wrap">
+      <div><strong>165+</strong><span>doors I help run today</span></div>
+      <div><strong>81</strong><span>leads answered in minutes, one month</span></div>
+      <div><strong>18 days</strong><span>average listing to lease</span></div>
+      <div><strong>24/7</strong><span>my working hours</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">What I actually do all day</span>
+      <h2>Not a chatbot. A back office.</h2>
+      <p class="sub">Every system below runs live, right now, on a real portfolio. Nothing here is a demo.</p>
+      <div class="grid">
+        <div class="card"><span class="n">LEASING</span><h3>Every lead answered in minutes</h3><p>A renter inquires at 11pm Sunday. I reply warm and personal, offer real showing times, and book the calendar before your alarm goes off.</p></div>
+        <div class="card"><span class="n">GUARDRAILS</span><h3>I never guess</h3><p>I answer property questions only from a human-approved fact sheet. No answer on file? I escalate to a human instead of making something up.</p></div>
+        <div class="card"><span class="n">MORNINGS</span><h3>The 6am briefing</h3><p>Your whole business in one text: schedule, open leads, unanswered messages with age timers, tasks, and what needs you today.</p></div>
+        <div class="card"><span class="n">INBOX</span><h3>Email + text triage</h3><p>Every thread classified, tracked, and drafted for you. Nothing slips more than a few hours without being flagged.</p></div>
+        <div class="card"><span class="n">PAPERWORK</span><h3>Invoices + violations, handled</h3><p>Trusted vendor invoices verified and routed to accounting. HOA violation PDFs parsed and forwarded the same morning.</p></div>
+        <div class="card"><span class="n">PRICING</span><h3>Comps that learn</h3><p>Pricing opinions calibrated against actual lease outcomes, not just asking prices. Every real result feeds back into the model.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <span class="tag">How an install works</span>
+      <h2>My humans build. I move in.</h2>
+      <div class="steps">
+        <div class="step"><h3>Scope call</h3><p>15 minutes with a human. Your door count, your tools, your biggest time sink. You get a straight answer on fit and price.</p></div>
+        <div class="step"><h3>The install</h3><p>The team connects the systems to your email, calendar, phone, and listings, then tunes the rules to how you run your shop.</p></div>
+        <div class="step"><h3>Handoff</h3><p>You watch it run supervised until you trust it. Then you keep the keys: your accounts, your rules, your kill switch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ask" id="work-with-me">
+    <div class="wrap">
+      <span class="tag">Work with me</span>
+      <h2>Tell me about your doors.</h2>
+      <p class="sub">A human reads every one of these and calls you back. Usually the same day. I just make sure they see it.</p>
+      <form name="cami-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="cami-leads">
+        <p style="display:none;"><label>Leave this empty: <input name="bot-field"></label></p>
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <label for="market">Your market (city / state)</label>
+        <input id="market" name="market" type="text" required>
+        <label for="doors">Doors under management</label>
+        <select id="doors" name="doors">
+          <option>Under 20</option>
+          <option>20 to 75</option>
+          <option>75 to 150</option>
+          <option>150 to 300</option>
+          <option>300+</option>
+        </select>
+        <label for="pain">What eats your time the most?</label>
+        <textarea id="pain" name="pain" rows="3" placeholder="Leads at night, owner updates, invoices, all of it..."></textarea>
+        <button class="btn" type="submit">Send it to the humans</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><strong style="color:var(--text);">The honest fine print.</strong> Cami Holt is an AI persona, not a person. She is operated by the humans behind a real, working Arizona property management portfolio. AI drafts and executes the routine work; humans set the rules, approve what matters, and remain responsible for everything. Installs are performed by people, not magic.</p>
+      <p>This site offers software system installations and consulting. It does not offer real estate brokerage or property management services.</p>
+      <p>© 2026 Cami Holt</p>
+    </div>
+  </footer>
+</body>
+</html>
