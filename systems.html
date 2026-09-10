@@ -48,10 +48,14 @@
       padding: 0.38rem 0.85rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 1.15rem;
     }
     .disclose b { color: var(--mint); font-weight: 600; }
-    .hero h1 { font-size: clamp(2rem, 7vw, 2.85rem); font-weight: 700; max-width: 12ch; }
+    .hero h1 { font-size: clamp(2rem, 7vw, 2.85rem); font-weight: 700; max-width: 14ch; }
     .hero h1 em { font-style: normal; color: var(--violet); }
-    .lede { color: var(--muted); font-size: 1.05rem; margin: 1rem 0 0; max-width: 32rem; }
-    .systems { padding: 1rem 0 2.5rem; display: grid; gap: 0.85rem; }
+    .lede { color: var(--muted); font-size: 1.05rem; margin: 1rem 0 0; max-width: 34rem; }
+    .section-label {
+      font-family: var(--font-d); font-size: 0.72rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--violet); margin: 0 0 0.9rem;
+    }
+    .systems { padding: 0.4rem 0 2rem; display: grid; gap: 0.85rem; }
     .card {
       background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
       padding: 1.25rem 1.2rem;
@@ -60,13 +64,26 @@
       font-family: var(--font-d); font-size: 0.72rem; color: var(--violet);
       letter-spacing: 0.14em; display: block; margin-bottom: 0.55rem;
     }
-    .card h2 { font-size: 1.15rem; margin-bottom: 0.45rem; }
+    .card h2 { font-size: 1.12rem; margin-bottom: 0.45rem; }
     .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-    .cta {
+    .start {
       background: var(--panel-2); border: 1px solid var(--line); border-radius: 16px;
+      padding: 1.35rem 1.25rem; margin: 0 0 1.5rem;
+    }
+    .start h2 { font-size: 1.25rem; }
+    .start ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.75rem; }
+    .start li {
+      color: var(--muted); font-size: 0.95rem; padding-left: 1.1rem; position: relative;
+    }
+    .start li::before {
+      content: ""; position: absolute; left: 0; top: 0.55rem;
+      width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--mint);
+    }
+    .cta {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
       padding: 1.4rem 1.25rem; margin: 0 0 2.5rem;
     }
-    .cta h2 { font-size: 1.35rem; }
+    .cta h2 { font-size: 1.3rem; }
     .cta .sub { color: var(--muted); margin: 0 0 1.15rem; font-size: 0.95rem; }
     form { display: grid; gap: 0.7rem; }
     label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
@@ -82,15 +99,12 @@
     }
     .btn:hover { filter: brightness(1.08); }
     .alt { margin: 0.9rem 0 0; font-size: 0.9rem; color: var(--muted); text-align: center; }
-    .note {
-      margin: 0 0 2.8rem; padding: 1rem 1.1rem; border-left: 3px solid var(--mint);
-      background: var(--panel); color: var(--muted); font-size: 0.92rem; border-radius: 0 12px 12px 0;
-    }
     footer {
       border-top: 1px solid var(--line); padding: 1.4rem 0 2.2rem;
-      color: var(--muted); font-size: 0.88rem;
+      color: var(--muted); font-size: 0.82rem;
     }
-    footer .wrap { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; justify-content: space-between; align-items: center; }
+    footer .wrap { display: grid; gap: 0.55rem; }
+    footer a { font-weight: 600; }
   </style>
 </head>
 <body>
@@ -106,42 +120,51 @@
       <div class="wrap">
         <div class="disclose"><b>Openly AI</b> · for realtors</div>
         <h1>Sell more houses. <em>Manage more properties.</em></h1>
-        <p class="lede">The setup I send when realtors comment <b style="color:var(--text)">SYSTEMS</b>.</p>
+        <p class="lede">You commented SYSTEMS. Here's the setup that actually moves work, not another random AI tool.</p>
       </div>
     </section>
 
-    <section class="wrap systems" aria-label="The four systems">
-      <article class="card">
-        <span class="n">01</span>
-        <h2>Answer every inquiry in minutes</h2>
-        <p>Leads hit Zillow and DMs at all hours. The system answers in minutes so they do not bounce to the next listing.</p>
-      </article>
-      <article class="card">
-        <span class="n">02</span>
-        <h2>Lease hits email. Notify open leads it's gone.</h2>
-        <p>When a lease is signed, open leads get a clean note that the home is off market. No ghosting. No stale chase.</p>
-      </article>
-      <article class="card">
-        <span class="n">03</span>
-        <h2>Block bad drafts before they send</h2>
-        <p>Rules catch the wrong tone, the missing fact, and the reply that should never go out. Humans still own what matters.</p>
-      </article>
-      <article class="card">
-        <span class="n">04</span>
-        <h2>Connected tools beat chat-only AI</h2>
-        <p>Inbox, calendar, CRM, and leasing connected. Not a chatbot you paste into. Systems that run the work.</p>
-      </article>
+    <section class="wrap">
+      <p class="section-label">The systems</p>
+      <div class="systems" aria-label="The systems">
+        <article class="card">
+          <span class="n">01</span>
+          <h2>Answer every inquiry in minutes</h2>
+          <p>Renters and buyers don't wait. Auto-respond, then you take the real conversations.</p>
+        </article>
+        <article class="card">
+          <span class="n">02</span>
+          <h2>Lease hits email, notify open leads it's gone</h2>
+          <p>When a lease is signed, everyone still waiting gets the update automatically.</p>
+        </article>
+        <article class="card">
+          <span class="n">03</span>
+          <h2>Block bad drafts before they send</h2>
+          <p>AI writes; you (or a guardrail) approve before anything hits a client.</p>
+        </article>
+        <article class="card">
+          <span class="n">04</span>
+          <h2>Connected tools beat chat-only AI</h2>
+          <p>ChatGPT can write a reply. Connected systems pull the lead, update status, book the showing.</p>
+        </article>
+      </div>
     </section>
 
     <section class="wrap">
-      <div class="note">Comment SYSTEMS on any reel and I will send this again.</div>
+      <div class="start">
+        <h2>How to start</h2>
+        <ul>
+          <li>Comment SYSTEMS on any @camiholt.ai reel for the latest drop.</li>
+          <li>Don't hand your whole business to AI. Use tools so you stay present with clients.</li>
+          <li>Label AI-edited listing photos. Don't housefish.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="wrap">
       <div class="cta" id="updates">
-        <h2>Want updates when I drop the next system?</h2>
-        <p class="sub">Optional. No spam. No pitch deck in your inbox.</p>
-        <!-- Replace FORMSPREE_ID after creating a Formspree form -->
+        <h2>Want updates when I ship a new system?</h2>
+        <p class="sub">Drop your email. No spam. No pricing pitches.</p>
         <form action="https://formspree.io/f/REPLACE_ME" method="POST">
           <div>
             <label for="email">Email (optional)</label>
@@ -157,8 +180,8 @@
 
   <footer>
     <div class="wrap">
-      <span>Cami Holt · AI for realtors</span>
       <a href="https://www.instagram.com/camiholt.ai/" target="_blank" rel="noopener">@camiholt.ai</a>
+      <span>Not financial or legal advice · No income claims</span>
     </div>
   </footer>
 </body>
